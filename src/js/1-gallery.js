@@ -91,4 +91,7 @@ function myFunction() {
 }
 
 ulList.insertAdjacentHTML('afterbegin', myFunction());
-const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250 });
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
