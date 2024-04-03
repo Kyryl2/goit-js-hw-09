@@ -67,3 +67,44 @@ img {
 .gallery-item {
   flex-basis: calc((100% - 48px) / 3);
 }
+
+.sl-wrapper .sl-navigation button.sl-prev {
+  position: fixed;
+  top: 50%;
+  margin-top: -22px;
+  height: 44px;
+  width: 22px;
+  line-height: 44px;
+  text-align: center;
+  display: block;
+  z-index: 10060;
+  font-family: Arial, Baskerville, monospace;
+
+  color: white;
+}
+
+.sl-wrapper .sl-navigation button.sl-next {
+  position: fixed;
+  top: 50%;
+  margin-top: -22px;
+  height: 44px;
+  width: 22px;
+  line-height: 44px;
+  text-align: center;
+  display: block;
+  z-index: 10060;
+  font-family: Arial, Baskerville, monospace;
+
+  color: white;
+}
+
+div.sl-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(46, 47, 66, 0.8);
+  display: none;
+  z-index: 1035;
+}
