@@ -11,9 +11,6 @@ function fillFeedbackFormFields() {
       return;
     }
     userData = userDataFromLS;
-    // feedbackFormEl.elements.user_name.value = userDataFromLS.user_name;
-    // feedbackFormEl.elements.user_email.value = userDataFromLS.user_email;
-    // feedbackFormEl.elements.user_message.value = userDataFromLS.user_message;
 
     for (const key in userDataFromLS) {
       form.elements[key].value = userDataFromLS[key];
@@ -28,13 +25,12 @@ form.addEventListener('input', setNewData);
 form.addEventListener('submit', clickButton);
 
 function setNewData(event) {
-  // const feedbackFieldEl = event.target;
   const { target: feedbackFieldEl } = event;
 
   const feedbackFieldName = feedbackFieldEl.name;
   const feedbackFieldValue = feedbackFieldEl.value;
 
-  userData[feedbackFieldName] = feedbackFieldValue;
+  userData[feedbackFieldName] = feedbackFieldValue.trim();
 
   localStorage.setItem('feedback-form-state', JSON.stringify(userData));
 }
