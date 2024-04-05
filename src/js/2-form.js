@@ -53,11 +53,10 @@ function clickButton(event) {
     alert('Будь ласка, заповніть поле textarea.');
 
     return;
-  } else {
-    alert('Дякуємо за ваш відгук!');
-    event.preventDefault();
-    console.log(userData);
-    localStorage.removeItem('feedback-form-state');
-    form.reset();
   }
+  alert('Дякуємо за ваш відгук!');
+  event.preventDefault();
+  console.log(userData);
+  localStorage.removeItem('feedback-form-state');
+  form.reset();
 }
